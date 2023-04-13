@@ -1,0 +1,15 @@
+total 23
+drwxr-xr-x 1 darre 197609    0 Apr  2 19:21 blogging_app/
+-rw-r--r-- 1 darre 197609 1157 Apr  2 17:15 cat command.txt
+-rw-r--r-- 1 darre 197609    0 Apr  2 22:11 content.txt
+-rw-r--r-- 1 darre 197609   61 Apr  2 22:10 file1.txt
+-rw-r--r-- 1 darre 197609  943 Apr  2 19:43 file2.txt
+-rw-r--r-- 1 darre 197609 1157 Apr  2 17:18 file3.txt
+drwxr-xr-x 1 darre 197609    0 Apr  2 21:22 includes/
+-rw-r--r-- 1 darre 197609 1334 Apr  2 22:07 index.php
+-rw-r--r-- 1 darre 197609    0 Apr  2 13:33 mysettings.php
+-rw-r--r-- 1 darre 197609  139 Apr  2 17:29 newfile.txt
+-rw-r--r-- 1 darre 197609   30 Apr  2 22:10 today.txt
+This is love
+Bah Bah Sheep
+ 14 108 649 content.txt
