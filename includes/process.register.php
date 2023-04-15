@@ -7,10 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'dbconnect.php';
 
     //sanitize input and store in php variables
-    $first_name = $_POST["first_name"];
-    $last_name = $_POST["last_name"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
+    $first_name = check_input($_POST["first_name"]);
+    $last_name = check_input($_POST["last_name"]);
+    $email = check_input($_POST["email"]);
+    $password = check_input($_POST["password"]);
+
 
     //check if variables are empty
     if (empty($first_name) || empty($last_name) || empty($email) || empty($password)) {
@@ -60,4 +61,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 } else {
     //if no info sent with submit...
     header("Location: ../register.php?user_error");
+    exit;
 } //if isset $_POST end
+function check_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}

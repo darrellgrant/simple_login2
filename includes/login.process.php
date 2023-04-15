@@ -6,8 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'dbconnect.php';
 
     //sanitize input and store in php variables
-    $email = $_POST["email"];
-    $password = $_POST["password"];
+    $email = check_input($_POST["email"]);
+    $password = check_input($_POST["password"]);
 
     //check if variables are empty
     if (empty($email) || empty($password)) {
@@ -52,4 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header("Location: ../login.php?error=user_login_error");
     exit();
 
+}
+function check_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
